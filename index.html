@@ -2,15 +2,41 @@
 <head>
     <title>omega calc</title>
     <script type="text/javascript">
-    function calc(textBox1) {
-        alert("fatal error no cripling depresshin vip found! " + textBox1);
+    function add(omgcl1, omgcl2) {
+        var omgclInt = parseInt(omgcl1);
+        var omgclInt2 = parseInt(omgcl2);
+        var answr = (omgclInt + omgclInt2);
+        document.getElementById('omgcl3').value = answr;
+    }
+    function sub(omgcl1, omgcl2) {
+        var omgclInt = parseInt(omgcl1);
+        var omgclInt2 = parseInt(omgcl2);
+        var answr = (omgclInt - omgclInt2);
+        document.getElementById('omgcl3').value = answr;
+    }
+    function mul(omgcl1, omgcl2) {
+        var omgclInt = parseInt(omgcl1);
+        var omgclInt2 = parseInt(omgcl2);
+        var answr = (omgclInt * omgclInt2);
+        document.getElementById('omgcl3').value = answr;
+    }
+    function div(omgcl1, omgcl2) {
+        var omgclInt = parseInt(omgcl1);
+        var omgclInt2 = parseInt(omgcl2);
+        var answr = (omgclInt / omgclInt2);
+        document.getElementById('omgcl3').value = answr;
     }
     </script>
 </head>
 <body>
 <form>
-<input name="omgcl" type="text">
-<input name="omb" type="button" value="calc=" onclick="calc(form.omgcl.value)">
+<input name="omgcl" type="text"><br />
+<input name="omgcl2" type="text"><br />
+<input name="omb" type="button" value="add" onclick="add(form.omgcl.value, form.omgcl2.value)">
+<input name="omb" type="button" value="sub" onclick="sub(form.omgcl.value, form.omgcl2.value)">
+<input name="omb" type="button" value="mul" onclick="mul(form.omgcl.value, form.omgcl2.value)">
+<input name="omb" type="button" value="div" onclick="div(form.omgcl.value, form.omgcl2.value)"><br />
+<input id="omgcl3" type="text">
 </form>
 </body>
 </html>
